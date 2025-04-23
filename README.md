@@ -24,7 +24,7 @@ We’re working with a dataset that includes major U.S. power outages from **Jan
 | `TOTAL.SALES`       | Total electricity usage in the affected state (in megawatt-hours)                                     |
 | `MONTH`             | Calendar month when the outage occurred                                                               |
 
-These features provide a mix of environmental, economic, and temporal factors that we hypothesize may influence outage duration. Our goal is to understand these relationships and use them to improve outage planning and resilience.
+These features provide a mix of environmental, economic, and temporal factors that we hypothesize may influence outage duration. Our goal is to understand these relationships and use them to improve outage planning.
 
 ---
 
