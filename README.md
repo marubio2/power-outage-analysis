@@ -90,3 +90,25 @@ The original distribution was strongly **right-skewed**, with most outages affec
 After applying **median imputation**, the overall shape of the distribution remained the same, preserving its skew. The only notable change is a visible spike at the median value — the location where missing values were filled in. This ensures consistency while maintaining the integrity of the data’s structure.
 
 ---
+
+## Framing a Prediction Problem
+
+For this project, I chose to predict the **duration of a power outage (in minutes)**. This is a regression problem because the target variable, `OUTAGE.DURATION`, is a continuous numerical value. We are trying to estimate how long an outage will last based on available features, rather than classifying it into a discrete category.
+
+This prediction is meaningful because outage duration directly impacts **customer experience**, **emergency preparedness**, and **operational planning**. An accurate estimate of how long a power outage might last can help communities make more informed decisions about food storage, medical equipment, evacuation, and infrastructure deployment.
+
+To evaluate model performance, I chose **Mean Squared Error (MSE)** as the evaluation metric. MSE penalizes larger errors more than smaller ones, which is ideal in this context where **large mispredictions (underestimates especially)** can have serious consequences.
+
+### Features Used for Prediction
+
+To train my model, I used the following features:
+
+- **Month**: The month when the power outage occurred  
+- **Cause Category**: The high-level reason for the outage (e.g., severe weather, equipment failure)  
+- **Climate Category**: Annual climate condition based on the Oceanic Niño Index (ONI) — *Warm, Cold, or Normal*  
+- **Climate Region**: The general geographic region of the U.S. in which the outage occurred  
+- **Total Sales**: The total electricity usage in the state (in megawatt-hours)  
+- **Customers Affected**: The number of customers impacted by the outage  
+
+All of these features are known at the time the outage is reported, ensuring that the model is trained only on **real-time accessible inputs**, making it suitable for deployment in emergency forecasting or outage response tools.
+
