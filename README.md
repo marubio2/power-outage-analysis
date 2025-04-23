@@ -160,7 +160,12 @@ residuals = y_test - y_pred
 ```
 Visualizing the residuals helps show us whether the model under-predicts or over-predicts.
 
-// add graph here // 
+<iframe
+ src="assets/residual_plot.html"
+ width="800"
+ height="600"
+ frameborder="0"
+ ></iframe>
 
 The histogram shows that most residuals are small, clustering around 0. The distribution is right-skewed, meaning that there are a large number of cases where the model underestimates the outage duration. These outliers may represent long outages that our linear model doesn't capture, showing that the baseline model is limited in handling extreme cases.
 
