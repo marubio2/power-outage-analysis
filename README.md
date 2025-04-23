@@ -28,7 +28,7 @@ These features provide a mix of environmental, economic, and temporal factors th
 
 ---
 
-## Step 2: Data Cleaning and Exploratory Data Analysis
+## Data Cleaning and Exploratory Data Analysis
 
 ### Data Cleaning
 
