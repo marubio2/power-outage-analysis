@@ -1,4 +1,4 @@
-# Power Outage Analysis
+# What Effects How Long a Power Outage Lasts?
 
 by Michael Rubio (marubio@umich.edu)
 
