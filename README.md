@@ -49,7 +49,7 @@ After loading the cleaned data into a DataFrame, we selected the following colum
 - `OUTAGE.DURATION`
 - `CLIMATE.REGION`
 
-To make the data more interpretable, we renamed each column to be more human-readable and converted the `MONTH` column from numerical values (e.g., 1, 2, ..., 12) to full month names (e.g., "January", "February", etc.).
+To make the data more interpretable, we renamed each column to be more readable and converted the `MONTH` column from numerical values (e.g., 1, 2, ..., 12) to full month names (e.g., "January", "February", etc.).
 
 We also calculated the percentage of missing values in each column:
 
