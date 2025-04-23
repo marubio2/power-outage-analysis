@@ -148,6 +148,30 @@ The box plots show that lower total sale ranges (0-15M) tend to have wider sprea
 
 ## Aggregates
 
+To better understand how power outages vary throughout the year, I created a pivot table that groups the data by month and summarizes the average number of customers affected and the average outage duration.
+
+### Average Outage Statistics by Month
+
+| Month      | Customers Affected | Outage Duration (minutes) |
+|------------|--------------------|----------------------------|
+| January    | 132,934.647        | 3,387.947                  |
+| February   | 110,949.386        | 2,497.144                  |
+| March      | 88,996.085         | 3,265.894                  |
+| April      | 85,433.224         | 1,493.860                  |
+| May        | 100,688.754        | 2,093.424                  |
+| June       | 108,803.649        | 1,957.654                  |
+| July       | 94,754.036         | 2,315.897                  |
+| August     | 172,845.053        | 2,428.477                  |
+| September  | 214,190.804        | 4,294.522                  |
+| October    | 153,130.198        | 3,645.774                  |
+| November   | 90,828.000         | 1,728.159                  |
+| December   | 134,032.402        | 3,311.794                  |
+
+
+The pivot table shows that September had the highest average number of customers affected, with over 200k customers affected.
+
+We also generally see that late-summer and fall months tend to show more severe outages, having higher average number of customers affected and higher average outage duration than other times of the year.
+
 ---
 
 ## Framing a Prediction Problem
