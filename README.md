@@ -112,3 +112,40 @@ To train my model, I used the following features:
 
 All of these features are known at the time the outage is reported, ensuring that the model is trained only on **real-time accessible inputs**, making it suitable for deployment in emergency forecasting or outage response tools.
 
+## Baseline Model
+
+To establish a baseline for prediction, I used a **Linear Regression** model to predict power outage duration based on six features available at the time an outage begins.
+
+### Features Used
+
+**Quantitative (2 features):**
+- `Customers Affected` — number of customers impacted by the outage
+- `Total Sales` — total electricity usage in the state (in megawatt-hours)
+
+**Nominal Categorical (4 features):**
+- `Cause Category` — reason for the outage
+- `Month` — month when the outage occurred
+- `Climate Category` — annual climate condition based on the Oceanic Niño Index
+- `Climate Region` — general geographic region of the U.S.
+
+All categorical variables were **one-hot encoded**, with the first category dropped to prevent multicollinearity.
+
+---
+
+### Model Implementation
+
+The model was implemented using a `scikit-learn` pipeline. I split the dataset into an 80/20 train-test split and evaluated the model using **Mean Squared Error (MSE)** on the test set.
+
+- **Baseline Test MSE**: `41,761,280`
+
+This relatively high error suggests that the linear model struggles to generalize well to unseen data. Outage durations may depend on more complex relationships (e.g., nonlinear effects, interactions) that linear regression is not equipped to capture.
+
+---
+
+### Residual Analysis
+
+To better understand the model’s behavior, I visualized the **residuals** (prediction errors). Residuals are the differences between the actual and predicted durations:
+
+```py
+residuals = y_test - y_pred
+
