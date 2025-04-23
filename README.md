@@ -124,6 +124,30 @@ We see from the histogram that majority of power outages occur during normal cli
 
 ## Bivariate Analysis 
 
+Now we're going to look at the relationship between Climate Region vs Outage Duration.
+
+<iframe
+ src="assets/region_duration.html"
+ width="800"
+ height="600"
+ frameborder="0"
+ ></iframe>
+
+From the boxplot, we can see that the East North Central region has the highest median outage duration of 3120 minutes and the West North Central region has the lowest median outage duration of 59.5 minutes. We can also see that other than the East North Central region and the West North Central region, all the regions do have a large number of outliers.
+
+Now we're going to look at the relationship between Total Sales vs Outage Duration.
+
+<iframe
+ src="assets/sales_box.html"
+ width="800"
+ height="600"
+ frameborder="0"
+ ></iframe>
+
+The box plots show that lower total sale ranges (0-15M) tend to have wider spread and higher median outage duration times, while higher total sale ranges exhibit shorter and more consistent outage duration times. This suggests that higher-selling regions have better recovery times.
+
+## Aggregates
+
 ---
 
 ## Framing a Prediction Problem
