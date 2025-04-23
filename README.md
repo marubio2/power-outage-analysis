@@ -100,7 +100,7 @@ After applying **median imputation**, the overall shape of the distribution rema
 
 ## Univariate Analysis 
 
-Here, we're going to look at the distribution of the Cause Category.
+Here, we're going to look at the distribution of the **Cause Category**.
 
 <iframe
  src="assets/cause_distribution.html"
@@ -111,7 +111,7 @@ Here, we're going to look at the distribution of the Cause Category.
 
 We see from the histogram that the majority of major power outages are caused by severe weather and intentional attack (such as vandalism). This shows that power outages are mostly caused by weather, and leads us to think about ways to protect our power from severe weather conditions.
 
-Now we're going to look at the distribution of the Climate Category.
+Now we're going to look at the distribution of the **Climate Category**.
 
 <iframe
  src="assets/climate_category.html"
@@ -124,7 +124,7 @@ We see from the histogram that majority of power outages occur during normal cli
 
 ## Bivariate Analysis 
 
-Now we're going to look at the relationship between Climate Region vs Outage Duration.
+Now we're going to look at the relationship between **Climate Region vs Outage Duration**.
 
 <iframe
  src="assets/region_duration.html"
@@ -135,7 +135,7 @@ Now we're going to look at the relationship between Climate Region vs Outage Dur
 
 From the boxplot, we can see that the East North Central region has the highest median outage duration of 3120 minutes and the West North Central region has the lowest median outage duration of 59.5 minutes. We can also see that other than the East North Central region and the West North Central region, all the regions do have a large number of outliers.
 
-Now we're going to look at the relationship between Total Sales vs Outage Duration.
+Now we're going to look at the relationship between **Total Sales vs Outage Duration**.
 
 <iframe
  src="assets/sales_box.html"
@@ -201,11 +201,11 @@ To establish a baseline for prediction, I used a **Linear Regression** model to 
 
 ### Features Used
 
-**Quantitative (2 features):**
+**Quantitative:**
 - `Customers Affected` — number of customers impacted by the outage
 - `Total Sales` — total electricity usage in the state (in megawatt-hours)
 
-**Nominal Categorical (4 features):**
+**Nominal Categorical:**
 - `Cause Category` — reason for the outage
 - `Month` — month when the outage occurred
 - `Climate Category` — annual climate condition based on the Oceanic Niño Index
