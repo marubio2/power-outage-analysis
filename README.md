@@ -79,12 +79,21 @@ We visualized the distribution of `Customers Affected` both **before** and **aft
 
 #### Before Imputation
 
-<iframe src="assets/customers_affected_before_imputation.html" width="800" height="500" frameborder="0"></iframe>
+ <iframe
+ src="assets/affected_before.html"
+ width="800"
+ height="600"
+ frameborder="0"
+ ></iframe>
 
 #### After Imputation
 
-<iframe src="assets/customers_affected_after_imputation.html" width="800" height="500" frameborder="0"></iframe>
-
+<iframe
+ src="assets/affected_after.html"
+ width="800"
+ height="600"
+ frameborder="0"
+ ></iframe>
 The original distribution was strongly **right-skewed**, with most outages affecting a relatively small number of customers and a long tail representing rare but very large-scale outages.
 
 After applying **median imputation**, the overall shape of the distribution remained the same, preserving its skew. The only notable change is a visible spike at the median value — the location where missing values were filled in. This ensures consistency while maintaining the integrity of the data’s structure.
