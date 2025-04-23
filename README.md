@@ -195,11 +195,3 @@ This ~9 million-point reduction in MSE suggests that the final model:
 - **Captures more nuanced outage relationships**
 
 ---
-
-### Residual Visualization
-
-<iframe src="assets/final_model_residuals.html" width="800" height="500" frameborder="0"></iframe>
-
----
-
-
