@@ -278,3 +278,7 @@ This ~9 million-point reduction in MSE suggests that the final model:
 - **Captures more nuanced outage relationships**
 
 ---
+
+## Conclusion 
+
+Our analysis shows that outage duration can be reasonably estimated using factors like cause category, customer scale, and time of the year. While the baseline **Linear Regression** model provided a starting point, the **Random Forest Regressor* model with feature engineering significantly improved predictive accuracy. With further refinement, this kind of model could help utilities make faster decisions and allocate resources more effectively during emergencies.
