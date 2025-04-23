@@ -98,6 +98,32 @@ The original distribution was strongly **right-skewed**, with most outages affec
 
 After applying **median imputation**, the overall shape of the distribution remained the same, preserving its skew. The only notable change is a visible spike at the median value — the location where missing values were filled in. This ensures consistency while maintaining the integrity of the data’s structure.
 
+## Univariate Analysis 
+
+Here, we're going to look at the distribution of the Cause Category.
+
+<iframe
+ src="assets/cause_distribution.html"
+ width="800"
+ height="600"
+ frameborder="0"
+ ></iframe>
+
+We see from the histogram that the majority of major power outages are caused by severe weather and intentional attack (such as vandalism). This shows that power outages are mostly caused by weather, and leads us to think about ways to protect our power from severe weather conditions.
+
+Now we're going to look at the distribution of the Climate Category.
+
+<iframe
+ src="assets/climate_category.html"
+ width="800"
+ height="600"
+ frameborder="0"
+ ></iframe>
+
+We see from the histogram that majority of power outages occur during normal climate conditions, followed by cold then warm episodes. This shows that power outages aren't necessecarily driven by deviations in the ONI (Oceanic Nino Index).
+
+## Bivariate Analysis 
+
 ---
 
 ## Framing a Prediction Problem
