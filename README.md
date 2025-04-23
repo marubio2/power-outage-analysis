@@ -148,4 +148,6 @@ To better understand the model’s behavior, I visualized the **residuals** (pre
 
 ```py
 residuals = y_test - y_pred
+```
+Visualizing the residuals helps show us whether the model under-predicts or over-predicts.
 
