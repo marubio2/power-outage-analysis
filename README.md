@@ -155,3 +155,51 @@ Visualizing the residuals helps show us whether the model under-predicts or over
 
 The histogram shows that most residuals are small, clustering around 0. The distribution is right-skewed, meaning that there are a large number of cases where the model underestimates the outage duration. These outliers may represent long outages that our linear model doesn't capture, showing that the baseline model is limited in handling extreme cases.
 
+## Final Model
+
+To improve on the baseline Linear Regression, I built a **Random Forest Regressor** model, which is better suited for capturing **nonlinear relationships** and **complex interactions** between features.
+
+### New Engineered Features
+
+To enhance model performance, I engineered two additional features:
+
+#### 1. Log-Transformed `Customers Affected`
+The number of affected customers spans several orders of magnitude. Applying a **logarithmic transformation** reduces skew and allows the model to better distinguish between small-scale and large-scale outages.
+
+> *“Since the number of affected customers varies drastically, the log transformation helps reduce the influence of extreme values and improves the model’s ability to learn meaningful patterns.”*
+
+#### 2. `Season` Feature (from `Month`)
+Months were grouped into **four seasons** (Winter, Spring, Summer, Fall), which provide more generalizable weather-related context.
+
+> *“I created a `Season` feature because seasonal conditions strongly influence outage patterns. This helped reduce noise from month-to-month variability and allowed the model to capture broader climate effects.”*
+
+---
+
+### Hyperparameter Tuning
+
+I used `GridSearchCV` to tune key hyperparameters of the `RandomForestRegressor`, evaluating each combination using **5-fold cross-validation** and **negative MSE** as the scoring metric. The best-performing parameters were:
+
+- `n_estimators = 200`  
+- `max_depth = 10`  
+- `min_samples_split = 2`
+
+---
+
+### Final Model Performance
+
+The final model achieved a **test MSE of 32,717,926**, compared to the baseline MSE of **41,761,280**.
+
+This ~9 million-point reduction in MSE suggests that the final model:
+- **Generalizes better to unseen data**
+- **Handles nonlinearities more effectively**
+- **Captures more nuanced outage relationships**
+
+---
+
+### Residual Visualization
+
+<iframe src="assets/final_model_residuals.html" width="800" height="500" frameborder="0"></iframe>
+
+---
+
+
