@@ -108,7 +108,6 @@ Here, we're going to look at the distribution of the **Cause Category**.
  height="600"
  frameborder="0"
  ></iframe>
-
 We see from the histogram that the majority of major power outages are caused by severe weather and intentional attack (such as vandalism). This shows that power outages are mostly caused by weather, and leads us to think about ways to protect our power from severe weather conditions.
 
 Now we're going to look at the distribution of the **Climate Category**.
@@ -119,7 +118,6 @@ Now we're going to look at the distribution of the **Climate Category**.
  height="600"
  frameborder="0"
  ></iframe>
-
 We see from the histogram that majority of power outages occur during normal climate conditions, followed by cold then warm episodes. This shows that power outages aren't necessecarily driven by deviations in the ONI (Oceanic Nino Index).
 
 ## Bivariate Analysis 
@@ -132,7 +130,6 @@ Now we're going to look at the relationship between **Climate Region vs Outage D
  height="600"
  frameborder="0"
  ></iframe>
-
 From the boxplot, we can see that the East North Central region has the highest median outage duration of 3120 minutes and the West North Central region has the lowest median outage duration of 59.5 minutes. We can also see that other than the East North Central region and the West North Central region, all the regions do have a large number of outliers.
 
 Now we're going to look at the relationship between **Total Sales vs Outage Duration**.
@@ -143,7 +140,6 @@ Now we're going to look at the relationship between **Total Sales vs Outage Dura
  height="600"
  frameborder="0"
  ></iframe>
-
 The box plots show that lower total sale ranges (0-15M) tend to have wider spread and higher median outage duration times, while higher total sale ranges exhibit shorter and more consistent outage duration times. This suggests that higher-selling regions have better recovery times.
 
 ## Aggregates
@@ -240,7 +236,6 @@ Visualizing the residuals helps show us whether the model under-predicts or over
  height="600"
  frameborder="0"
  ></iframe>
-
 The histogram shows that most residuals are small, clustering around 0. The distribution is right-skewed, meaning that there are a large number of cases where the model underestimates the outage duration. These outliers may represent long outages that our linear model doesn't capture, showing that the baseline model is limited in handling extreme cases.
 
 ## Final Model
